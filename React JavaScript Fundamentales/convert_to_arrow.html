@@ -11,8 +11,9 @@
     <p id="paragraph">
         This website is boring, with very little CSS. 
         However, we really just care about the javascript. 
-        For example, if you click <button id="button">this button</button>, the background of this paragraph tag will change to blue.
+        For example, if you click on the buttom button, the background of this paragraph tag will change to blue.
     </p>
+    <button id="button">this button</button>
     <p>We also have a <button id="alert">alert</button> button that will grab the text from the input below and show it in a popup.</p>
     <div>
         <input type="text" id="popup-input">
@@ -20,9 +21,9 @@
     <p>
         We just like random interactivity in the site, including a fun effect if you hover over <span id="hover-this">        <b>this.</b></span>
     </p>
-    <p onmouseover="mouseOverFunction(this)">
+    <p id="p2" onmouseover="mouseOverFunction(this)">
         Another task: This should be another feature. 
-        I want to click anywhere in this paragraph tag and I want to be able to change the background color to whatever is in this input: <input type="text"/>.
+        I want to click anywhere in this paragraph tag and I want to be able to change the background color to whatever is in this input: <input id="yourinput" type="text"/>.
     </p>
     <script>
         document.getElementById("button").onclick = function() {
@@ -39,6 +40,10 @@
         }
         document.getElementById("paragraph").onclick = function() {
             setBackgroundColorById("paragraph", "yellow");
+        }
+        document.getElementById("p2").onclick = function() {
+            
+            setBackgroundColorById("p2", document.getElementById("yourinput").value);
         }
         const getValueFromId=(id)=>{
             return document.getElementById(id).value;
