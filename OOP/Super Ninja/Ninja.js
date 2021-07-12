@@ -28,6 +28,9 @@ class Sensi extends Ninja{
         const message= super.drinkSake();
         console.log(`Wisdom message is: ${ message }`);
     }
+    drinkSake(){
+        return this.health+=10;
+    }
 }
 const ninja1 = new Ninja("sahar", 100);
 ninja1.sayName();
