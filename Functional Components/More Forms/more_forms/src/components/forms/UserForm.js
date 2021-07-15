@@ -15,7 +15,7 @@ const UserForm = (props) => {
 
 const checkFirstName=(e)=>{
     setFirstname(e.target.value)
-    if(e.target.value.length <2){
+    if(e.target.value.length <2 && e.target.value.length!==0){
       setfnameError("First name must be at least 2 characters")
     }
     else{
@@ -26,7 +26,7 @@ const checkFirstName=(e)=>{
 
 const checkLastName=(e)=>{
     setLastname(e.target.value)
-    if(e.target.value.length <2){
+    if(e.target.value.length <2 && e.target.value.length!==0){
       setlnameError("Last name must be at least 2 characters")
     }
     else{
@@ -37,7 +37,7 @@ const checkLastName=(e)=>{
 } 
 const checkEmail=(e)=>{
     setEmail(e.target.value)
-    if(e.target.value.length <2){
+    if(e.target.value.length <2 && e.target.value.length!==0){
       setemailError("Email must be at least 2 characters")
     }
     else{
@@ -47,7 +47,7 @@ const checkEmail=(e)=>{
 } 
 const checkPassword=(e)=>{
     setPassword(e.target.value)
-    if(e.target.value.length <8){
+    if(e.target.value.length <8 && e.target.value.length!==0){
       setpassError("Password must be at least 8 characters")
     }
     else{
