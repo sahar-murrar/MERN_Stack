@@ -1,0 +1,12 @@
+commands:
+1. put, type this url and choose the joke id you want to delete and chooe put method and in the body update on of the fileds or both (setup and punchline):
+localhost:8000/api/jokes/update/6101619b9df03e3298ce41db
+
+2. delete, type this url and choose the joke id you want to delete and choose delete method:
+localhost:8000/api/jokes/delete/6101619b9df03e3298ce41db
+
+3. post, type this url and choose post method and in the body add setup and punchline fileds
+localhost:8000/api/jokes/new 
+
+4. get, type this url in the browser or postman and choose get method:
+http://localhost:8000/api/jokes
