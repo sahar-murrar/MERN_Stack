@@ -15,7 +15,8 @@ const ProductList=(props) => {
                return <tr>
                   <td>{product.title}</td>
                   <td>{product.price}</td>
-                  <td><Link to={`/api/product/${product._id}`}>{product.description}</Link></td>
+                  <td>{product.description}</td>
+                  <td><Link to={`/api/product/${product._id}`}>View Details</Link></td>
                 </tr>
              
             })}
